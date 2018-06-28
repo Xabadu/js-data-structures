@@ -9,8 +9,7 @@ class Queue {
   }
 
   dequeue() {
-    this.queue.shift();
-    return this.queue;
+    return this.queue.shift();
   }
 
   peek() {
@@ -31,10 +30,10 @@ class Queue {
 }
 
 const queue = new Queue();
-console.log(queue.enqueue(1)); // [1]
-console.log(queue.enqueue(2)); // [1, 2]
-console.log(queue.enqueue(3)); // [1, 2, 3]
-console.log(queue.dequeue()); // [2, 3]
-console.log(queue.peek()); // 2
+console.log(queue.enqueue('The Rock')); // ['The Rock']
+console.log(queue.enqueue('John Cena')); // ['The Rock', 'John Cena']
+console.log(queue.enqueue('Stone Cold Steve Austin')); // ['The Rock', 'John Cena', 'Stone Cold Steve Austin']
+console.log(queue.dequeue()); // 'The Rock'
+console.log(queue.peek()); // 'John Cena'
 console.log(queue.isEmpty()); // false
-console.log(queue.print()); // [2, 3]
+console.log(queue.print()); // ['John Cena', 'Stone Cold Steve Austin']
